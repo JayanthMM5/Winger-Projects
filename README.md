@@ -52,10 +52,27 @@ python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
-3️⃣ **Install Dependencies**
+### **3️⃣ Required Packages Installation**
+Before running the project, install all required dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
+
+If you don’t have a `requirements.txt` file, create one using:
+```bash
+pip freeze > requirements.txt
+```
+
+Or manually install the main packages used in the project:
+```bash
+pip install flask flask-mysql flask-login pandas scikit-learn
+```
+
+If your project includes **Jupyter Notebook** for ML model training, also install:
+```bash
+pip install jupyter notebook matplotlib seaborn
+```
+
 4️⃣ **Set Up MySQL Database**
 - Update `config.py` with your MySQL credentials.
 - Run database migrations:
